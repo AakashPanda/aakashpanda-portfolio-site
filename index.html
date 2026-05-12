@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aakash Panda - Senior Software Developer & Machine Learning Engineer Portfolio. Building intelligent AI-powered systems, scalable backend architectures, and futuristic digital experiences." />
+    <meta name="keywords" content="Aakash Panda, Senior Software Developer, Machine Learning Engineer, AI, Computer Vision, Portfolio, Mumbai" />
+    <meta name="author" content="Aakash Panda" />
+    <title>Aakash Panda | Senior Software Developer & ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ==================== LOADING SCREEN ==================== -->
+<div id="loader">
+    <div class="loader-container">
+        <div class="loader-ring">
+            <div class="loader-ring-inner"></div>
+        </div>
+        <div class="loader-text">
+            <span class="loader-glitch" data-text="AP">AP</span>
+        </div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill" id="loaderBarFill"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== CURSOR GLOW ==================== -->
+<div id="cursorGlow"></div>
+
+<!-- ==================== PARTICLE CANVAS ==================== -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- ==================== FLOATING TECH ICONS ==================== -->
+<div class="floating-icons">
+    <i class="fab fa-python"></i>
+    <i class="fas fa-brain"></i>
+    <i class="fab fa-aws"></i>
+    <i class="fab fa-docker"></i>
+    <i class="fab fa-js"></i>
+    <i class="fas fa-database"></i>
+    <i class="fab fa-tensorflow"></i>
+    <i class="fas fa-eye"></i>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">
+            <span class="logo-text">&lt;AP /&gt;</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== HERO SECTION ==================== -->
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for Opportunities
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Aakash Panda</span>
+            </h1>
+            <div class="hero-typing">
+                <span class="typing-text" id="typingText"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Building intelligent AI-powered systems, scalable backend architectures, and futuristic digital experiences.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary btn-glow" id="downloadResume">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i> Contact Me
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://linkedin.com/in/aakash-panda" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/aakashpanda" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:aakash.panda@email.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-glow"></div>
+            <div class="profile-ring">
+                <div class="profile-placeholder">
+                    <img src="assets/images/Aakash_Photo.jpg" alt="Aakash Panda" class="profile-image" />
+                </div>
+            </div>
+            <div class="tech-stack-icons">
+                <i class="fab fa-python" style="--i: 1;"></i>
+                <i class="fas fa-brain" style="--i: 2;"></i>
+                <i class="fab fa-aws" style="--i: 3;"></i>
+                <i class="fas fa-eye" style="--i: 4;"></i>
+                <i class="fab fa-docker" style="--i: 5;"></i>
+                <i class="fab fa-js" style="--i: 6;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== ABOUT SECTION ==================== -->
+<section id="about" class="section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">About Me</span>
+            <h2 class="section-title">Know Me <span class="gradient-text">More</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text reveal">
+                <div class="about-card glass">
+                    <p class="about-description">
+                        Machine Learning Engineer and Senior Software Developer with <strong>3+ years</strong> of experience in 
+                        <strong>computer vision</strong>, <strong>deep learning</strong>, scalable backend systems, 
+                        REST APIs, and cloud infrastructure. Specialized in AI surveillance systems, facial recognition, 
+                        object detection, video analytics, and production-grade ML deployments.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value"><i class="fas fa-map-marker-alt"></i> Mumbai, India</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value"><i class="fas fa-envelope"></i> aakash.panda@email.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Availability</span>
+                            <span class="info-value"><i class="fas fa-clock"></i> Freelance / Full-Time</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Languages</span>
+                            <span class="info-value"><i class="fas fa-language"></i> English, Hindi, Odia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats reveal">
+                <div class="stat-card glass">
+                    <div class="stat-number" data-target="3">0</div>
+                    <span class="stat-suffix">+</span>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-number" data-target="20">0</div>
+                    <span class="stat-suffix">+</span>
+                    <p class="stat-label">Projects Delivered</p>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-number" data-target="15">0</div>
+                    <span class="stat-suffix">+</span>
+                    <p class="stat-label">AI/ML Models</p>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-number" data-target="100">0</div>
+                    <span class="stat-suffix">%</span>
+                    <p class="stat-label">Commitment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SKILLS SECTION ==================== -->
+<section id="skills" class="section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">My Skills</span>
+            <h2 class="section-title">Technical <span class="gradient-text">Expertise</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="skills-content">
+            <div class="skill-category reveal">
+                <div class="skill-category-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>Machine Learning & Deep Learning</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">TensorFlow</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">PyTorch</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">CNN / Deep Learning</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category reveal">
+                <div class="skill-category-header">
+                    <i class="fas fa-eye"></i>
+                    <h3>Computer Vision</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">OpenCV</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Video Analytics</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Facial Recognition</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Object Detection</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category reveal">
+                <div class="skill-category-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend Development</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Django</span>
+                            <span class="skill-percent">93%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Flask</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">REST APIs</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Celery</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category reveal">
+                <div class="skill-category-header">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud & DevOps</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Docker</span>
+                            <span class="skill-percent">87%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">AWS</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">GCP</span>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Azure</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category reveal">
+                <div class="skill-category-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Frontend Development</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML5 / CSS3</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Bootstrap</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category reveal">
+                <div class="skill-category-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Databases</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">PostgreSQL</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== EXPERIENCE SECTION ==================== -->
+<section id="experience" class="section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">Professional <span class="gradient-text">Journey</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025 – 2026</div>
+                <div class="timeline-card glass">
+                    <div class="timeline-card-header">
+                        <h3>Software Developer</h3>
+                        <span class="timeline-company">Kproskills</span>
+                    </div>
+                    <ul class="timeline-points">
+                        <li>Developed end-to-end LMS and e-commerce platform with Django and React.</li>
+                        <li>Built RESTful APIs handling 10K+ daily requests with optimized query performance.</li>
+                        <li>Integrated payment gateways and third-party authentication systems.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022 – 2025</div>
+                <div class="timeline-card glass">
+                    <div class="timeline-card-header">
+                        <h3>Senior Software Developer</h3>
+                        <span class="timeline-company">Aurify Systems</span>
+                    </div>
+                    <ul class="timeline-points">
+                        <li>Architected AI-based surveillance systems with real-time face detection and recognition.</li>
+                        <li>Developed computer vision pipelines processing 1000+ video streams concurrently.</li>
+                        <li>Reduced model inference latency by 40% through TensorRT optimization.</li>
+                        <li>Led a team of 5 developers, implementing CI/CD pipelines and Docker containerization.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021 – 2022</div>
+                <div class="timeline-card glass">
+                    <div class="timeline-card-header">
+                        <h3>Frontend Developer</h3>
+                        <span class="timeline-company">Webinbox</span>
+                    </div>
+                    <ul class="timeline-points">
+                        <li>Built responsive web interfaces using HTML5, CSS3, JavaScript, and Bootstrap.</li>
+                        <li>Optimized frontend performance achieving 95+ Lighthouse scores.</li>
+                        <li>Collaborated with design team to implement pixel-perfect UI components.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021</div>
+                <div class="timeline-card glass">
+                    <div class="timeline-card-header">
+                        <h3>Backend Developer Intern</h3>
+                        <span class="timeline-company">Ananta Resource Management</span>
+                    </div>
+                    <ul class="timeline-points">
+                        <li>Developed REST APIs and database schemas for resource management platform.</li>
+                        <li>Implemented authentication and authorization using JWT and OAuth2.</li>
+                        <li>Wrote unit and integration tests achieving 85% code coverage.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PROJECTS SECTION ==================== -->
+<section id="projects" class="section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">Projects</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card glass reveal" data-tilt>
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>AI-Based Surveillance Systems</h3>
+                    <p>Real-time AI surveillance platform with facial recognition, object detection, and video analytics for enterprise security.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>TensorFlow</span><span>OpenCV</span><span>Django</span><span>Docker</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card glass reveal" data-tilt>
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Kproskills LMS & E-commerce Platform</h3>
+                    <p>Full-featured learning management system with integrated e-commerce, payment processing, and user analytics dashboard.</p>
+                    <div class="project-tech">
+                        <span>Django</span><span>PostgreSQL</span><span>JavaScript</span><span>Bootstrap</span><span>Celery</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card glass reveal" data-tilt>
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Fashion Chemistry Platform</h3>
+                    <p>Innovative platform combining fashion design with chemistry, enabling material analysis and sustainable fabric recommendations.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Flask</span><span>MySQL</span><span>JavaScript</span><span>CSS3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card glass reveal" data-tilt>
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Dynamic Blog Platform</h3>
+                    <p>Feature-rich blogging platform with rich text editor, tagging system, SEO optimization, and social sharing capabilities.</p>
+                    <div class="project-tech">
+                        <span>Django</span><span>PostgreSQL</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card glass reveal" data-tilt>
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Railway Ticket Booking System</h3>
+                    <p>Comprehensive railway reservation system with real-time seat availability, dynamic pricing, and payment gateway integration.</p>
+                    <div class="project-tech">
+                        <span>Django</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span><span>Celery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CERTIFICATIONS SECTION ==================== -->
+<section id="certifications" class="section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">Certifications</span>
+            <h2 class="section-title">My <span class="gradient-text">Credentials</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="certs-grid">
+            <div class="cert-card glass reveal" data-tilt>
+                <div class="cert-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Claude 101</h3>
+                <p>Anthropic Education</p>
+                <span class="cert-date">2025</span>
+            </div>
+            <div class="cert-card glass reveal" data-tilt>
+                <div class="cert-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Python Programming</h3>
+                <p>Udemy</p>
+                <span class="cert-date">2022</span>
+            </div>
+            <div class="cert-card glass reveal" data-tilt>
+                <div class="cert-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Django Web Development</h3>
+                <p>Udemy</p>
+                <span class="cert-date">2022</span>
+            </div>
+            <div class="cert-card glass reveal" data-tilt>
+                <div class="cert-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p>Udemy</p>
+                <span class="cert-date">2021</span>
+            </div>
+            <div class="cert-card glass reveal" data-tilt>
+                <div class="cert-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Signal Analysis & Machine Learning</h3>
+                <p>Professional Certification</p>
+                <span class="cert-date">2023</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SERVICES SECTION ==================== -->
+<section id="services" class="section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">Services</span>
+            <h2 class="section-title">What I <span class="gradient-text">Offer</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card glass reveal" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI & ML Solutions</h3>
+                <p>Custom machine learning models, deep learning pipelines, and AI-powered applications for business automation.</p>
+            </div>
+            <div class="service-card glass reveal" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>REST API Development</h3>
+                <p>Scalable, secure, and documented RESTful APIs with Django REST Framework and Flask.</p>
+            </div>
+            <div class="service-card glass reveal" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Full Stack Development</h3>
+                <p>End-to-end web application development from database architecture to polished frontend interfaces.</p>
+            </div>
+            <div class="service-card glass reveal" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Computer Vision Systems</h3>
+                <p>Real-time object detection, facial recognition, video analytics, and surveillance systems.</p>
+            </div>
+            <div class="service-card glass reveal" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>Cloud Deployment</h3>
+                <p>AWS, GCP, and Azure deployment with Docker containerization and CI/CD pipeline setup.</p>
+            </div>
+            <div class="service-card glass reveal" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Dashboard Development</h3>
+                <p>Interactive data visualization dashboards with real-time analytics and reporting features.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTACT SECTION ==================== -->
+<section id="contact" class="section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-form-container reveal">
+                <form class="contact-form glass" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="formName" name="name" required />
+                        <label for="formName">Your Name</label>
+                        <span class="form-line"></span>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="formEmail" name="email" required />
+                        <label for="formEmail">Your Email</label>
+                        <span class="form-line"></span>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="formSubject" name="subject" required />
+                        <label for="formSubject">Subject</label>
+                        <span class="form-line"></span>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="formMessage" name="message" rows="5" required></textarea>
+                        <label for="formMessage">Your Message</label>
+                        <span class="form-line"></span>
+                        <span class="form-error"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-glow form-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div class="form-message" id="formMessageStatus"></div>
+                </form>
+            </div>
+            <div class="contact-info reveal">
+                <div class="contact-card glass">
+                    <h3>Let's Talk</h3>
+                    <p>Have a project in mind or just want to say hello? Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>aakash.panda@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mumbai, India</span>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://linkedin.com/in/aakash-panda" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/aakashpanda" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:aakash.panda@email.com" class="social-btn" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">&lt;AP /&gt;</span>
+            </div>
+            <p class="footer-text">Building the future, one intelligent system at a time.</p>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/aakash-panda" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/aakashpanda" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:aakash.panda@email.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">
+                &copy; <span id="year"></span> Aakash Panda. All rights reserved. Built with <i class="fas fa-heart" style="color: var(--accent);"></i> and <i class="fas fa-bolt" style="color: var(--secondary);"></i>
+            </p>
+        </div>
+    </div>
+    <div class="footer-glow"></div>
+</footer>
+
+<!-- ==================== BACK TO TOP ==================== -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
